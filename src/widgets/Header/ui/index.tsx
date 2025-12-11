@@ -12,17 +12,17 @@ const Header: React.FC = () => {
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/" className="hover:underline">
                 홈
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/dashboard" className="hover:underline">
                 대시보드
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/settings" className="hover:underline">
                 설정
               </a>
             </li>
