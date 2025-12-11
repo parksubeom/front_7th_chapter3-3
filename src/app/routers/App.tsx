@@ -7,9 +7,8 @@ import { SettingsPage } from "@/pages/settings/ui/SettingsPage.tsx"
 import { Routes, Route, Navigate } from "react-router-dom"
 
 const App = () => {
-  const BASE_PATH = "/front_lite_chapter3-3/"
   return (
-    <Router basename={BASE_PATH}>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="flex flex-col min-h-screen">
         <Header />
 
