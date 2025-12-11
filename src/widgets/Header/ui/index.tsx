@@ -1,5 +1,6 @@
 import React from "react"
 import { MessageSquare } from "lucide-react"
+import { Link } from "react-router-dom" // 👈 1. Link 컴포넌트 import
 
 const Header: React.FC = () => {
   return (
@@ -12,19 +13,26 @@ const Header: React.FC = () => {
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <a href="/" className="hover:underline">
+              {/* 👈 2. a 태그 대신 Link 사용 / href 대신 to 사용 */}
+              {/* App.tsx의 basename 설정 덕분에 자동으로 /front_.../ 가 붙습니다 */}
+              <Link to="/" className="hover:underline">
                 홈
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/dashboard" className="hover:underline">
+              <Link to="/posts" className="hover:underline">
+                게시글 관리
+              </Link>
+            </li>
+            <li>
+              <Link to="/dashboard" className="hover:underline">
                 대시보드
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/settings" className="hover:underline">
+              <Link to="/settings" className="hover:underline">
                 설정
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
