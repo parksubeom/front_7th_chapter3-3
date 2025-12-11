@@ -24,7 +24,7 @@ export const getPosts = async (
 ): Promise<PostResponse> => {
   const params = makeParams(limit, skip, sortBy, sortOrder)
   // ✅ /api 대신 BASE_URL 사용
-  const response = await fetch(`${BASE_URL}/posts?${params}`)
+  const response = await fetch(`${BASE_URL}?${params}`)
   return response.json()
 }
 
@@ -38,7 +38,7 @@ export const searchPosts = async (
 ): Promise<PostResponse> => {
   const params = makeParams(limit, skip, sortBy, sortOrder)
   // ✅ /api 대신 BASE_URL 사용
-  const response = await fetch(`${BASE_URL}/posts/search?q=${query}&${params}`)
+  const response = await fetch(`${BASE_URL}/search?q=${query}&${params}`)
   return response.json()
 }
 
@@ -52,6 +52,6 @@ export const getPostsByTag = async (
 ): Promise<PostResponse> => {
   const params = makeParams(limit, skip, sortBy, sortOrder)
   // ✅ /api 대신 BASE_URL 사용
-  const response = await fetch(`${BASE_URL}/posts/tag/${tag}?${params}`)
+  const response = await fetch(`${BASE_URL}/tag/${tag}?${params}`)
   return response.json()
 }
