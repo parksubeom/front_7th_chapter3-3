@@ -49,9 +49,6 @@ jobs:
           NODE_ENV: production
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
 
-      # ✨ [추가된 핵심 로직] ✨
-      # SPA 라우팅 문제 해결을 위해 index.html을 복사해서 404.html을 만듭니다.
-      # 이렇게 하면 어떤 경로로 들어와도 리액트 앱이 실행됩니다.
       - name: Create 404.html for GitHub Pages routing
         run: cp dist/index.html dist/404.html
 

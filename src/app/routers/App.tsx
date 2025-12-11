@@ -1,14 +1,15 @@
 import { BrowserRouter as Router } from "react-router-dom"
-import Header from "../../widgets/Header/ui/index.tsx"
-import Footer from "../../widgets/Footer/ui/index.tsx"
-import PostsManagerPage from "../../pages/posts-manager/ui/Page.tsx"
+import Header from "@/widgets/Header/ui/index.tsx"
+import Footer from "@/widgets/Footer/ui/index.tsx"
+import PostsManagerPage from "@/pages/posts-manager/ui/Page.tsx"
 import { DashboardPage } from "@/pages/dashboard/ui/DashboardPage.tsx"
 import { SettingsPage } from "@/pages/settings/ui/SettingsPage.tsx"
 import { Routes, Route, Navigate } from "react-router-dom"
 
 const App = () => {
+  const BASE_PATH = "/front_lite_chapter3-3/"
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router basename={BASE_PATH}>
       <div className="flex flex-col min-h-screen">
         <Header />
 
